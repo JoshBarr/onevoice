@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 	    },
 	    concat: {
 	    	dist: {
-	    		src: ['src/js/jquery.js', 'src/build/site.js'],
+	    		src: ['src/js/jquery.js', 'src/js/quicktube.js', 'src/js/liketodl.min.js', 'src/build/site.js'],
       			dest: 'www/assets/js/site.js',
 	    	}
 	    },
@@ -33,6 +33,20 @@ module.exports = function(grunt) {
 	    		files: "src/js/*.js",
 	    		tasks: [ "uglify", "concat"]
 	    	}
+	    },
+	    grunticon: {
+		    icons: {
+	            files: [{
+	                expand: true,
+	                cwd: 'src/icons',
+	                src: ['*.svg', '*.png'],
+	                dest: "www/assets/css/icons/"
+	            }],
+		        options: {
+		        	defaultWidth: "28px",
+		        	defaultHeight: "28px"
+		      	}
+		    }
 	    }
 	});
 
@@ -42,9 +56,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-grunticon');
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['sass']);
+
+	grunt.registerTask('icon', 'grunticon')
 
 };
