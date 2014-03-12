@@ -357,6 +357,24 @@ $colorTwit: #5d93fd;
 }
 
 
+.toxic {
+    background: #fff;
+}
+
+.toxic__box {
+    min-height:  4em;
+}
+
+.toxic__overlay {
+    @extend %absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+
+
 
 
 @include media('small-only') {

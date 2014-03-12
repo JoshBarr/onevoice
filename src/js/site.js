@@ -2,14 +2,19 @@
 
     var site = {
         init: function() {
-    		$('#locker-464').liketodl({
-		        download_url: 'sampleDownload.zip',
-		        like_url: 'http://google.com',
-		        like_colorscheme: 'dark'
-		    });
+    		
+        },
+        showDownloadLink: function(url, el) {
+			var $el = $("[data-download]");
+			// var $fb = $("[data-likebox]");
+			$el.addClass("toxic__active");
+			$el.hide();
+			$el.html("<a href='https://soundcloud.com/nakita-turner-music' class='btn btn-primary'>Thanks! Grab the track on SoundCloud</a>");
+			$el.fadeIn();
+            // $fb.fadeOut();
         }
     };
-    
+
 
     window.Site = site;
     

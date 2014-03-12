@@ -214,7 +214,7 @@ table {
 .relative, .arrow--left, .arrow--right, .arrow--side, .arrow--center, .badge, .btn-group, .btn-group-vertical, .btn-group > .btn, .btn-group-vertical > .btn {
   position: relative; }
 
-.absolute, .absolute--bottom-left, .absolute--bottom-right, .absolute--top-left, .absolute--top-right, .arrow {
+.absolute, .absolute--bottom-left, .absolute--bottom-right, .absolute--top-left, .absolute--top-right, .arrow, .toxic__overlay {
   position: absolute; }
 
 
@@ -4326,6 +4326,19 @@ a {
 
 .social > li + li {
   margin-left: 1em; }
+
+.toxic {
+  background: #fff; }
+
+.toxic__box {
+  min-height: 4em; }
+
+.toxic__overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff; }
 
 @media only screen and (max-width: 47.99em) {
   body {

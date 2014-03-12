@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 	    },
 	    concat: {
 	    	dist: {
-	    		src: ['src/js/jquery.js', 'src/js/quicktube.js', 'src/js/liketodl.min.js', 'src/build/site.js'],
+	    		src: ['src/js/jquery.js', 'src/js/quicktube.js', 'src/build/site.js'],
       			dest: 'www/assets/js/site.js',
 	    	}
 	    },

@@ -1,13 +1,31 @@
 {% extends "template.j2" %}
 
 {% block layout %}
+	
+	<div id="fb-root"></div>
+	<script>
+		var page_like_callback = function(url, html_element) {
+			Site.showDownloadLink(url, html_element);
+		};
+		window.fbAsyncInit = function() {
+			FB.Event.subscribe('edge.create', page_like_callback);
+			$("[data-bookface]").removeClass("hide");
+		};
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<div class="max-video-width">
 		<div class="gutters mt-xl">
-			<!-- LIVE VIDEO ID = fQrCti-hqu0  <iframe src="//www.youtube.com/watch?v=fQrCti-hqu0?wmode=opaque" frameborder="0" width="100%" height="450px" allowfullscreen></iframe> -->
-		
+			{# TEMP VID ID FOR TESTING #}
+			{# set vid_id = "OCWj5xgu5Ng" #}
 			<div class="quicktube" data-quicktube="kittens">
-			    <div class="quicktube__video" data-quicktube-video="OCWj5xgu5Ng">
+			    <div class="quicktube__video" data-quicktube-video="fQrCti-hqu0">
 			    </div>
 			    <div data-quicktube-play="kittens" class="quicktube__poster" data-quicktube-poster>
 			    	<img src="/assets/images/poster.jpg">
@@ -17,10 +35,8 @@
 			        </div>
 			    </div>
 			</div>
-
 		</div>
 	</div>
-
 
 
 	<div class="max-width">
@@ -29,27 +45,32 @@
 
 			<ul class='nav social mt-l'>
 				<li>
-					<a href="#" class='btn btn--icon-large  btn-facebook'><i class='i icon-facebook'></i> Share on facebook</a>
+					<span class='st_facebook_custom btn btn--icon-large btn-facebook' displayText='Share on facebook' st_title="At 11 She Was Bullied. At 13 She Decided To Act. Now, At 15, We All Get To Watch In Awe." st_description="Once again, a New Zealand teen shows us how it’s done." st_image="http://onevoice.net.nz/assets/images/social/1.jpg" st_url="http://onevoice.net.nz"><i class='i icon-facebook'></i> Share on facebook</span>
 				</li>
 				<li>
-					<a href="#" class='btn btn--icon-large btn-twitter'><i class='i icon-twitter'></i> Share on twitter</a>
+					<span class='st_twitter_custom btn btn--icon-large btn-twitter' st_via="livefortmw" st_title="Bullying is not okay. But this may just be coolest way to tell us that  @TurnerNakita #OneVoice" st_image="http://onevoice.net.nz/assets/images/social/1.jpg" st_url="http://onevoice.net.nz" displayText='Share on twitter'><i class='i icon-twitter'></i> Share on twitter</span>
 				</li>
 			</ul>
 			
-
 			<hr class='mt-l mb-xl'>
 
-			<div class="like-dl blue" id="locker-111"></div>
+			<h3>
+				Like Nakita on Facebook to download the single
+			</h3>
 
+			<div class='relative toxic' data-download-container>
+				<div class="block-m toxic__box" data-likebox>
+					<div class="fb-like-box"  data-href="https://www.facebook.com/NakitaTurnerMusic" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+				</div>
+				<div class="absolute toxic__overlay block-m" style='display: none;'  data-download>
+					
+				</div>
+			</div>
+			
+			
 
-			<p>
-
-				Like this page for your free download
-			</p>
-
-
+			
 		</div>
-
 
 		<div class="more text-center mt-xl">
 			<hr>
@@ -63,6 +84,8 @@
 
 {% endblock %}
 
+
 {% block scripts %}
-    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1" async="true"></script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "dc10d3e0-c975-4b9f-878b-26ceaa7df16b", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
 {% endblock %}
