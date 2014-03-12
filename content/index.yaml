@@ -1,0 +1,9 @@
+meta:
+    title: 'One Voice'
+    alias: 'Watch'
+    template: 'home.j2'
+    weight: 0
+    hide_from_nav: false
+
+data:
+    title: "This is where some really compelling text will go."

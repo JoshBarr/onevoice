@@ -1,0 +1,9 @@
+meta:
+    title: 'One Voice - Reach out'
+    alias: 'Reach out'
+    template: 'reach-out.j2'
+    weight: 2
+    hide_from_nav: false
+
+data:
+    title: "This is where some really compelling text will go."

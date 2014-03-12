@@ -1,0 +1,181 @@
+// Screen.scss
+
+@import "lib/fred";
+
+$teal: #078D99;
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    background-color: #efefef;
+}
+
+h1 {
+    line-height: 1.45;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+    line-height: 1.45;
+    color: $teal;
+}
+
+
+hr {
+    background-color: #ddd;
+}
+
+
+p {
+    font-size: 1em;
+    line-height: 1.5625;
+}
+
+a {
+    color: $teal;
+    text-decoration: none;
+    &:hover {
+        border-bottom: solid 1px $teal;
+    }
+}
+
+
+.banner {
+    background-color: #078D99;
+    
+    padding-top: 9em;
+    padding-bottom: 9em;
+
+    h1 {
+        color: #fff;
+        @extend .antialiased;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 3.125em;
+        letter-spacing: .1em;
+    }
+}
+
+
+@media only screen and (max-width: 37.5em) {
+    .banner {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .banner h1 {
+        font-size: 1.875em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+// Layout 
+
+.max-banner-width {
+    max-width: 52em;
+    @extend %center-element;
+}
+
+.max-width {
+    max-width: 43em;
+    @extend %center-element;
+}
+
+.gutters {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+// Nav items 
+
+
+.site-nav > li {
+    margin-left: 1.5em;
+    font-weight: 100;
+    letter-spacing: .1em;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    &:hover {
+        color: #000;
+    }
+}
+
+    .nav-item--selected {
+        color: #fff;
+        border-bottom: solid 1px #fff;
+        &:hover {
+            border-bottom-color: #000;
+        }
+    }
+
+
+
+.site-footer {
+    background-color: #fff;
+    color: #888;
+}
+
+.btn-primary {
+    background-color: $teal;
+    color: #fff;
+}
+
+.btn-facebook {
+    background-color: #44549b;
+    color: #fff;
+}
+
+.btn-twitter {
+    background-color: #5d93fd;
+    color: #fff;
+}
+
+
+.graveyard > li {
+    margin-left: 3em;
+    vertical-align: middle;
+    transition: opacity .1s;
+    opacity: .7;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.graveyard a {
+    display: inline-block;
+    vertical-align: middle;
+    &:hover {
+        text-decoration: none;
+        border: 0;
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    line-height: 3.125;
+}
+
+
+
+
+

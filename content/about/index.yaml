@@ -1,0 +1,9 @@
+meta:
+    title: 'One Voice - About'
+    alias: 'About'
+    template: 'about.j2'
+    weight: 1
+    hide_from_nav: false
+
+data:
+    title: "This is where some really compelling text will go."

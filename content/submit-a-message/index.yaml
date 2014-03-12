@@ -1,0 +1,9 @@
+meta:
+    title: 'One Voice - Reach out'
+    alias: 'Submit a message'
+    template: 'submit.j2'
+    weight: 2
+    hide_from_nav: false
+
+data:
+    title: "This is where some really compelling text will go."
