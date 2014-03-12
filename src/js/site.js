@@ -5,13 +5,14 @@
     		
         },
         showDownloadLink: function(url, el) {
+            if (ga) {
+                ga('send', 'like', 'click', url);
+            }
 			var $el = $("[data-download]");
-			// var $fb = $("[data-likebox]");
 			$el.addClass("toxic__active");
 			$el.hide();
 			$el.html("<a href='https://soundcloud.com/nakita-turner-music' class='btn btn-primary'>Thanks! Grab the track on SoundCloud</a>");
 			$el.fadeIn();
-            // $fb.fadeOut();
         }
     };
 
