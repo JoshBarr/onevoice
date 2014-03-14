@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         },
         concat: {
             dist: {
-                src: ['src/js/jquery.js', 'src/js/quicktube.js', 'src/build/site.js'],
+                src: ['src/js/jquery.js', 'src/build/site.js'],
                 dest: 'www/assets/js/site.js',
             }
         },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'src/build/site.js': ['src/js/site.js']
+                    'src/build/site.js': ['src/js/quicktube.js', 'src/js/site.js']
                 }
             }
         },
