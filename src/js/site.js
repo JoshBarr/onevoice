@@ -8,6 +8,11 @@
             if (ga) {
                 ga('send', 'like', 'click', url);
             }
+
+            if (!url.match("NakitaTurnerMusic")) {
+                return;
+            }
+
 			var $el = $("[data-download]");
 			$el.addClass("toxic__active");
 			$el.hide();
@@ -15,7 +20,6 @@
 			$el.fadeIn();
         }
     };
-
 
     window.Site = site;
     
