@@ -20,7 +20,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'src/build/site.js': ['src/js/quicktube.js', 'src/js/site.js']
+                    // 'src/build/site.js': ['src/js/quicktube.js', 'src/js/site.js']
+                    'src/build/site.js': ['src/js/site.js']
                 }
             }
         },
